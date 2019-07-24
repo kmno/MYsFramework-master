@@ -104,6 +104,8 @@ open class MYsBaseFramworkViewController: MYsGeneralViewController,UITableViewDa
         notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(appDidMovedToForegroundStatus), name: UIApplication.didEnterBackgroundNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(appWillMovedToForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+
     }
     
     @objc open func appMovedToBackground() {
@@ -115,6 +117,10 @@ open class MYsBaseFramworkViewController: MYsGeneralViewController,UITableViewDa
     }
     
     @objc open func appDidMovedToForegroundStatus() {
+        
+    }
+    
+    @objc open func appDidBecomeActive() {
         
     }
     
